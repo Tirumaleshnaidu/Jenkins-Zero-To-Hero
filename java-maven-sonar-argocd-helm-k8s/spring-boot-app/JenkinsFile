@@ -56,6 +56,7 @@ pipeline {
                     git config user.email "tirumaleshnaidu7@gmail.com"
                     git config user.name "Tirumaleshnaidu"
                     BUILD_NUMBER=${BUILD_NUMBER}
+                    git clone 'https://github.com/Tirumaleshnaidu/Jenkins-Zero-To-Hero.git'
                     sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" gitpractice/deployment.yml
                     cd gitpractice
                     git pull
