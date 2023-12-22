@@ -53,8 +53,8 @@ pipeline {
         steps {
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
                 sh '''
-                    git config user.email "tirumaleshnaidu7@gmail.com"
-                    git config user.name "Tirumaleshnaidu"
+                    git config --global user.name "Tirumaleshnaidu"
+                    git config --global user.email "tirumaleshnaidu7@gmail.com"
                     BUILD_NUMBER=${BUILD_NUMBER}
                     tmp_dir=$(mktemp -d)
                     echo $tmp_dir
