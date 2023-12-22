@@ -59,7 +59,7 @@ pipeline {
                     tmp_dir=$(mktemp -d)
                     echo $tmp_dir
                     git clone https://github.com/Tirumaleshnaidu/gitpractice.git $tmp_dir
-                    sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" $tmp_dir/gitpractice/deployment.yml
+                    sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" $tmp_dir/deployment.yml
                     cd $tmp_dir
                     git add .
                     git commit -m "Update deployment image to version ${BUILD_NUMBER}"
